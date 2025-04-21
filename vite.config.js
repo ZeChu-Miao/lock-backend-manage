@@ -26,7 +26,7 @@ export default defineConfig(({ mode, command }) => {
     // 打包配置
     build: {
       // https://vite.dev/config/build-options.html
-      sourcemap: command === 'build' ? false : 'inline',
+      sourcemap: 'inline',
       outDir: 'dist',
       assetsDir: 'assets',
       chunkSizeWarningLimit: 2000,
