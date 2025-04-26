@@ -56,7 +56,7 @@
             </div>
           </template>
           <div class="body">
-            <el-image src="@/assets/images/device.png" fit="contain" style="width: 100%; height: 160px;"></el-image>
+            <el-image src="https://p0.itc.cn/q_70/images01/20230524/6b270ac81ed14eba8b32184ef268358f.jpeg" fit="contain" style="width: 100%; height: 160px;"></el-image>
             <p>支持多种智能门锁设备的接入管理，包括指纹锁、密码锁、卡片锁、蓝牙锁等。提供设备注册、分组、状态监控、固件升级等功能。</p>
           </div>
         </el-card>
@@ -69,7 +69,7 @@
             </div>
           </template>
           <div class="body">
-            <el-image src="@/assets/images/permission.png" fit="contain" style="width: 100%; height: 160px;"></el-image>
+            <el-image src="https://bylw.hbeutc.cn/Content/Images/00.jpg" fit="contain" style="width: 100%; height: 160px;"></el-image>
             <p>灵活的权限分配系统，可按部门、角色、人员设置不同的门锁使用权限。支持临时授权、定时授权、紧急授权等多种授权方式。</p>
           </div>
         </el-card>
@@ -82,7 +82,7 @@
             </div>
           </template>
           <div class="body">
-            <el-image src="@/assets/images/analysis.png" fit="contain" style="width: 100%; height: 160px;"></el-image>
+            <el-image src="https://q8.itc.cn/images01/20240730/114187d1728e499bb9531e1223e6c596.jpeg" fit="contain" style="width: 100%; height: 160px;"></el-image>
             <p>提供直观的数据统计和分析功能，包括使用频率、异常记录、电量状态等。支持自定义报表导出，帮助管理者做出更明智的决策。</p>
           </div>
         </el-card>
