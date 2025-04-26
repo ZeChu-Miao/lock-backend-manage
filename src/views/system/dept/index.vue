@@ -142,6 +142,9 @@
 
 <script setup name="Dept">
 import { listDept, getDept, delDept, addDept, updateDept, listDeptExcludeChild } from "@/api/system/dept";
+import useDeptStore from "@/store/modules/dept"; // 引入store
+
+const deptStore = useDeptStore(); // 使用部门store
 
 const { proxy } = getCurrentInstance();
 const { sys_normal_disable } = proxy.useDict("sys_normal_disable");
@@ -257,12 +260,16 @@ function submitForm() {
           proxy.$modal.msgSuccess("修改成功");
           open.value = false;
           getList();
+          // 更新store中的部门列表
+          deptStore.getDeptList();
         });
       } else {
         addDept(form.value).then(response => {
           proxy.$modal.msgSuccess("新增成功");
           open.value = false;
           getList();
+          // 更新store中的部门列表
+          deptStore.getDeptList();
         });
       }
     }
@@ -276,6 +283,8 @@ function handleDelete(row) {
   }).then(() => {
     getList();
     proxy.$modal.msgSuccess("删除成功");
+    // 更新store中的部门列表
+    deptStore.getDeptList();
   }).catch(() => {});
 }
 

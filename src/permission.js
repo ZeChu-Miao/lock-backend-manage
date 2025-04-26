@@ -8,6 +8,7 @@ import { isRelogin } from '@/utils/request'
 import useUserStore from '@/store/modules/user'
 import useSettingsStore from '@/store/modules/settings'
 import usePermissionStore from '@/store/modules/permission'
+import useDeptStore from '@/store/modules/dept' // 引入部门store
 
 NProgress.configure({ showSpinner: false })
 
@@ -40,6 +41,12 @@ router.beforeEach((to, from, next) => {
                 router.addRoute(route) // 动态添加可访问路由表
               }
             })
+            
+            // 预加载部门列表数据
+            useDeptStore().getDeptList().catch(err => {
+              console.error('预加载部门列表失败:', err)
+            })
+            
             next({ ...to, replace: true }) // hack方法 确保addRoutes已完成
           })
         }).catch(err => {
